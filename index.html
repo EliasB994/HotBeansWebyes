@@ -1,65 +1,97 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hot Beans Web • Home</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hot Beans Web • Careers</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- dimmed background -->
   <div class="bg-overlay">
-    <img src="images/https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="" class="bg-image" />
+    <img src="images/tech-bg.jpg" alt="Tech Background" class="bg-image" />
   </div>
-
-  <!-- Sticky Navbar -->
   <nav class="navbar">
-    <div class="logo">Hot Beans Web</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li><a href="staff.html">Staff Profiles</a></li>
-      <li><a href="courses.html">Web Courses</a></li>
-      <li><a href="apply.html">Application form</a></li>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" class="logo-img" />
+      Hot Beans Web
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#staff">Staff Profiles</a></li>
+      <li><a href="#courses">Web Courses</a></li>
+      <li><a href="#apply">Application form</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <main class="container">
-    <section class="hero text-center">
+    <section class="hero text-center" id="home">
       <h1>Welcome to Hot Beans Web Careers</h1>
-      <p>Your journey to join our cutting‑edge team starts here.</p>
-      <a href="apply.html" class="btn">Apply Now</a>
+      <p>Your journey to join our cutting-edge team starts here.</p>
+      <a href="#apply" class="btn mt-4">Apply Now</a>
     </section>
 
-    <section class="about mt-4">
+    <section id="about" class="mt-4">
       <h2>Who We Are</h2>
-      <p>
-        Hot Beans Web specializes in delivering innovative web solutions.
-        We’re “hot” on creative development and passionate about brewing digital excellence.
-      </p>
+      <p>Hot Beans Web specializes in delivering innovative web solutions. We're hot on creative development and passionate about brewing digital excellence.</p>
     </section>
 
-    <section class="features mt-4">
-      <h2>Core Features</h2>
-      <ul>
-        <li>Responsive design for all devices</li>
-        <li>Sticky navigation and smooth hover effects</li>
-        <li>Professional layouts and micro‑interactions</li>
-        <li>Interactive application form</li>
+    <section id="staff" class="mt-4">
+      <h2>Our Team</h2>
+      <div class="profiles mt-4">
+        <div class="card">
+          <img src="images/alice.jpg" alt="Alice Johnson" />
+          <h3>Alice Johnson</h3>
+          <p>Front-end Developer</p>
+        </div>
+        <div class="card">
+          <img src="images/bob.jpg" alt="Bob Smith" />
+          <h3>Bob Smith</h3>
+          <p>Back-end Engineer</p>
+        </div>
+        <div class="card">
+          <img src="images/charlie.jpg" alt="Charlie Lee" />
+          <h3>Charlie Lee</h3>
+          <p>UI/UX Designer</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="mt-4">
+      <h2>Web Courses</h2>
+      <ul class="courses-list mt-2">
+        <li><a href="#" class="btn">React for Beginners</a></li>
+        <li><a href="#" class="btn">Advanced Node.js</a></li>
+        <li><a href="#" class="btn">UI/UX Design Principles</a></li>
       </ul>
+    </section>
+
+    <section id="apply" class="mt-4">
+      <h2>Application Form</h2>
+      <div class="form-placeholder mt-4">
+        <script type="text/javascript" src="https://form.jotform.com/jsform/251673401019349"></script>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="container text-center footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About us</a>
-      <a href="staff.html">Staff Profiles</a>
-      <a href="courses.html">Web Courses</a>
-      <a href="apply.html">Application form</a>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About us</a>
+      <a href="#staff">Staff Profiles</a>
+      <a href="#courses">Web Courses</a>
+      <a href="#apply">Application form</a>
     </div>
-    <p>© 2025 Hot Beans Web. All rights reserved.</p>
+    <p>© 2025 Hot Beans Web. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
