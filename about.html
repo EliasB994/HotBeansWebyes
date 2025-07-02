@@ -1,3 +1,4 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +9,42 @@
 </head>
 <body>
   <div class="bg-overlay">
-    <img src="images/tech-bg.jpg" alt="" class="bg-image" />
+    <img src="images/tech-bg.jpg" alt="Tech background" class="bg-image" />
   </div>
-  <nav class="navbar">…same as index…</nav>
-
+  <nav class="navbar">
+    <div class="logo">Hot Beans Web</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About us</a></li>
+      <li><a href="staff.html">Staff Profiles</a></li>
+      <li><a href="courses.html">Web Courses</a></li>
+      <li><a href="apply.html">Application form</a></li>
+    </ul>
+  </nav>
   <main class="container mt-4">
     <h1>About Us</h1>
     <p>
-      At Hot Beans Web, our mission is to empower businesses with cutting‑edge
+      At Hot Beans Web, our mission is to empower businesses with cutting-edge
       web technologies. Our team blends technical expertise with creative flair
       to deliver outstanding digital experiences.
     </p>
   </main>
-
-  <footer>…same as index…</footer>
+  <footer>
+    <div class="container text-center footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="staff.html">Staff Profiles</a>
+      <a href="courses.html">Web Courses</a>
+      <a href="apply.html">Application form</a>
+    </div>
+    <p>© 2025 Hot Beans Web. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
